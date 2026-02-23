@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jolly System – Parrucchieri | Via Santa Felice, Bologna</title>
+  <meta name="description" content="Jolly System parrucchieri a Bologna, Via Santa Felice 6/B. Taglio, piega, colore, permanente e molto altro. Chiama il 051 237317 per fissare un appuntamento." />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Jolly System – Parrucchieri Bologna" />
+  <meta property="og:description" content="Taglio, piega, colore e cura professionale del capello nel cuore di Bologna." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "Jolly System",
+    "description": "Parrucchieri a Bologna – taglio, piega, colore, permanente e trattamenti professionali.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Via Santa Felice, 6/B",
+      "addressLocality": "Bologna",
+      "addressRegion": "BO",
+      "postalCode": "40122",
+      "addressCountry": "IT"
+    },
+    "telephone": "+390512237317",
+    "sameAs": ["https://www.facebook.com/JollySystem"],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "08:00",
+        "closes": "20:00"
+      }
+    ],
+    "priceRange": "€–€€"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════
+       TOP BAR
+  ════════════════════════════════════════ -->
+  <div class="topbar" role="banner" aria-label="Informazioni di contatto rapide">
+    <div class="topbar-inner">
+      <a href="tel:+390512237317" class="topbar-phone" aria-label="Chiama Jolly System">
+        <i class="fas fa-phone" aria-hidden="true"></i> 051 237317
+      </a>
+      <span class="topbar-sep" aria-hidden="true">·</span>
+      <a href="https://maps.app.goo.gl/JgZY8gvMexCBRZJc9" target="_blank" rel="noopener noreferrer" class="topbar-addr" aria-label="Indicazioni stradali">
+        <i class="fas fa-location-dot" aria-hidden="true"></i> Via Santa Felice, 6/B · Bologna
+      </a>
+      <span class="topbar-sep" aria-hidden="true">·</span>
+      <span class="topbar-status" id="openStatus" aria-live="polite"></span>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       HEADER
+  ════════════════════════════════════════ -->
+  <header id="header" class="header">
+    <div class="header-inner">
+
+      <!-- Brand -->
+      <a href="#hero" class="brand" aria-label="Jolly System – torna in cima">
+        <div class="brand-emblem" aria-hidden="true">
+          <i class="fas fa-scissors"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Jolly System</span>
+          <span class="brand-tagline">Parrucchieri · Bologna</span>
+        </div>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="nav" aria-label="Navigazione principale">
+        <a href="#chi-siamo" class="nav-link" data-s="chi-siamo">Chi siamo</a>
+        <a href="#prezzi"    class="nav-link" data-s="prezzi">Prezzi</a>
+        <a href="#orari"     class="nav-link" data-s="orari">Orari</a>
+        <a href="#dove"      class="nav-link" data-s="dove">Dove siamo</a>
+        <a href="tel:+390512237317" class="nav-cta">
+          <i class="fas fa-phone" aria-hidden="true"></i> Prenota
+        </a>
+      </nav>
+
+      <!-- Hamburger -->
+      <button class="hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Apri menu di navigazione">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Mobile nav overlay -->
+  <nav id="mobile-nav" class="mobile-nav" aria-hidden="true" aria-label="Menu mobile">
+    <button class="mobile-nav__close" aria-label="Chiudi menu">
+      <i class="fas fa-times" aria-hidden="true"></i>
+    </button>
+    <div class="mobile-nav__links">
+      <a href="#chi-siamo" class="mobile-link">Chi siamo</a>
+      <a href="#prezzi"    class="mobile-link">Prezzi</a>
+      <a href="#orari"     class="mobile-link">Orari</a>
+      <a href="#dove"      class="mobile-link">Dove siamo</a>
+      <a href="tel:+390512237317" class="mobile-link mobile-link--cta">
+        <i class="fas fa-phone" aria-hidden="true"></i> Chiama per Appuntamento
+      </a>
+    </div>
+  </nav>
+  <div class="mobile-backdrop" aria-hidden="true"></div>
+
+
+  <!-- ════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════ -->
+  <section id="hero" class="hero" aria-labelledby="hero-title">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-pole"></div>
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-deco" aria-hidden="true">
+        <span class="deco-line"></span>
+        <i class="fas fa-scissors deco-icon"></i>
+        <span class="deco-line"></span>
+      </div>
+
+      <h1 id="hero-title" class="hero-title">
+        <em>Jolly</em> System
+      </h1>
+      <p class="hero-subtitle">Parrucchieri &middot; Bologna</p>
+      <p class="hero-desc">
+        Taglio, piega, colore e cura professionale del capello<br>
+        nel cuore di Bologna, in Via Santa Felice.
+      </p>
+
+      <a href="tel:+390512237317" class="hero-cta" aria-label="Chiama il 051 237317 per prenotare un appuntamento">
+        <i class="fas fa-phone" aria-hidden="true"></i>
+        <span>Chiama per Appuntamento</span>
+      </a>
+
+      <a href="#prezzi" class="hero-scroll" aria-label="Scorri verso il listino prezzi">
+        Scopri i nostri servizi <i class="fas fa-chevron-down" aria-hidden="true"></i>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
+       CHI SIAMO
+  ════════════════════════════════════════ -->
+  <section id="chi-siamo" class="section-chi-siamo" aria-labelledby="chi-siamo-title">
+    <div class="container">
+
+      <header class="section-hd">
+        <span class="section-eyebrow"><i class="fas fa-scissors" aria-hidden="true"></i> La nostra storia</span>
+        <h2 id="chi-siamo-title">Dal 1970 al Tuo Servizio</h2>
+        <div class="section-rule" aria-hidden="true"></div>
+      </header>
+
+      <p class="chi-intro">
+        Nata dalla passione di Fabrizio e portata avanti con lo stesso amore dal figlio Stefano,
+        la nostra bottega è oggi un simbolo di continuità nel cuore di Bologna.
+        Oltre cinquant'anni di arte del taglio maschile, tramandati di padre in figlio,
+        con una sola certezza: il cliente al centro di tutto.
+      </p>
+
+      <div class="chi-pillars">
+
+        <div class="chi-pillar">
+          <div class="chi-pillar__icon" aria-hidden="true">
+            <i class="fas fa-medal"></i>
+          </div>
+          <h3>Tradizione dal 1970</h3>
+          <p>Oltre mezzo secolo di esperienza, tramandato di padre in figlio con la stessa cura, passione e dedizione di sempre.</p>
+        </div>
+
+        <div class="chi-pillar">
+          <div class="chi-pillar__icon" aria-hidden="true">
+            <i class="fas fa-scissors"></i>
+          </div>
+          <h3>Solo taglio maschile</h3>
+          <p>Ci specializziamo esclusivamente nei tagli uomo. Fare bene una cosa sola è la nostra filosofia, e i risultati parlano da soli.</p>
+        </div>
+
+        <div class="chi-pillar">
+          <div class="chi-pillar__icon" aria-hidden="true">
+            <i class="fas fa-comments"></i>
+          </div>
+          <h3>Consulenza su misura</h3>
+          <p>Ti ascoltiamo, osserviamo la tua fisionomia e ti consigliamo il taglio più adatto al tuo stile e alla tua personalità.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
+       PREZZI
+  ════════════════════════════════════════ -->
+  <section id="prezzi" class="section-prezzi" aria-labelledby="prezzi-title">
+    <div class="container">
+
+      <header class="section-hd">
+        <span class="section-eyebrow"><i class="fas fa-scissors" aria-hidden="true"></i> Listino Prezzi</span>
+        <h2 id="prezzi-title">I Nostri Servizi</h2>
+        <div class="section-rule" aria-hidden="true"></div>
+      </header>
+
+      <div class="price-card">
+        <h3 class="price-card__title">
+          <i class="fas fa-star" aria-hidden="true"></i> Hair Styling
+        </h3>
+        <ul class="price-list" role="list" aria-label="Listino prezzi servizi">
+          <li class="price-item">
+            <span class="price-name">Taglio</span>
+            <span class="price-dots" aria-hidden="true"></span>
+            <span class="price-val" aria-label="26 euro e 50 centesimi">€ 26,50</span>
+          </li>
+          <li class="price-item">
+            <span class="price-name">Piega</span>
+            <span class="price-dots" aria-hidden="true"></span>
+            <span class="price-val" aria-label="15 euro">€ 15,00</span>
+          </li>
+          <li class="price-item">
+            <span class="price-name">Colore</span>
+            <span class="price-dots" aria-hidden="true"></span>
+            <span class="price-val" aria-label="18 euro">€ 18,00</span>
+          </li>
+          <li class="price-item">
+            <span class="price-name">Zotos</span>
+            <span class="price-dots" aria-hidden="true"></span>
+            <span class="price-val" aria-label="16 euro">€ 16,00</span>
+          </li>
+          <li class="price-item">
+            <span class="price-name">Permanente</span>
+            <span class="price-dots" aria-hidden="true"></span>
+            <span class="price-val" aria-label="32 euro">€ 32,00</span>
+          </li>
+          <li class="price-item">
+            <span class="price-name">Colpi di luce</span>
+            <span class="price-dots" aria-hidden="true"></span>
+            <span class="price-val" aria-label="30 euro">€ 30,00</span>
+          </li>
+          <li class="price-item">
+            <span class="price-name">Stiratura</span>
+            <span class="price-dots" aria-hidden="true"></span>
+            <span class="price-val" aria-label="33 euro">€ 33,00</span>
+          </li>
+          <li class="price-item">
+            <span class="price-name">Rasatura</span>
+            <span class="price-dots" aria-hidden="true"></span>
+            <span class="price-val" aria-label="8 euro">€ 8,00</span>
+          </li>
+        </ul>
+      </div>
+
+      <p class="price-note">
+        <i class="fas fa-info-circle" aria-hidden="true"></i>
+        Per trattamenti combinati o richieste speciali, contattaci direttamente.
+      </p>
+
+      <!-- Parrucchini e Toupet -->
+      <div class="wig-card">
+        <div class="wig-card__header">
+          <div class="wig-card__icon" aria-hidden="true">
+            <i class="fas fa-hand-holding-heart"></i>
+          </div>
+          <div>
+            <h3 class="wig-card__title">Parrucchini e Toupet</h3>
+            <span class="wig-card__badge">Consulenza personalizzata</span>
+          </div>
+        </div>
+        <p class="wig-card__text">
+          Sappiamo che la perdita dei capelli può essere un momento delicato.
+          Con discrezione e professionalità, offriamo una selezione di parrucchini e toupet
+          di alta qualità, realizzati con materiali naturali e sintetici,
+          per aiutarti a ritrovare la tua sicurezza e il tuo stile.
+        </p>
+        <p class="wig-card__note">
+          Il prezzo varia in base al prodotto scelto e alle esigenze personali.
+          Vieni a trovarci o chiamaci per una consulenza riservata e senza impegno.
+        </p>
+        <a href="tel:+390512237317" class="wig-card__cta" aria-label="Chiama per una consulenza sui parrucchini">
+          <i class="fas fa-phone" aria-hidden="true"></i> Prenota una consulenza
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
+       ORARI
+  ════════════════════════════════════════ -->
+  <section id="orari" class="section-orari" aria-labelledby="orari-title">
+    <div class="container">
+
+      <header class="section-hd section-hd--light">
+        <span class="section-eyebrow section-eyebrow--light">
+          <i class="fas fa-clock" aria-hidden="true"></i> Quando veniamo
+        </span>
+        <h2 id="orari-title">Orari di Apertura</h2>
+        <div class="section-rule section-rule--gold" aria-hidden="true"></div>
+      </header>
+
+      <div class="hours-grid" role="table" aria-label="Orari di apertura settimanali">
+        <div class="hours-row hours-row--closed" role="row" data-day="Lunedì">
+          <span class="hours-day" role="rowheader">Lunedì</span>
+          <span class="hours-time" role="cell">Chiuso</span>
+        </div>
+        <div class="hours-row" role="row" data-day="Martedì">
+          <span class="hours-day" role="rowheader">Martedì</span>
+          <span class="hours-time" role="cell">08:00 – 20:00</span>
+        </div>
+        <div class="hours-row" role="row" data-day="Mercoledì">
+          <span class="hours-day" role="rowheader">Mercoledì</span>
+          <span class="hours-time" role="cell">08:00 – 20:00</span>
+        </div>
+        <div class="hours-row" role="row" data-day="Giovedì">
+          <span class="hours-day" role="rowheader">Giovedì</span>
+          <span class="hours-time" role="cell">08:00 – 20:00</span>
+        </div>
+        <div class="hours-row" role="row" data-day="Venerdì">
+          <span class="hours-day" role="rowheader">Venerdì</span>
+          <span class="hours-time" role="cell">08:00 – 20:00</span>
+        </div>
+        <div class="hours-row" role="row" data-day="Sabato">
+          <span class="hours-day" role="rowheader">Sabato</span>
+          <span class="hours-time" role="cell">08:00 – 20:00</span>
+        </div>
+        <div class="hours-row hours-row--closed" role="row" data-day="Domenica">
+          <span class="hours-day" role="rowheader">Domenica</span>
+          <span class="hours-time" role="cell">Chiuso</span>
+        </div>
+      </div>
+
+      <div class="hours-cta">
+        <p>Per fissare un appuntamento, chiamaci direttamente.</p>
+        <a href="tel:+390512237317" class="btn-gold" aria-label="Chiama il 051 237317">
+          <i class="fas fa-phone" aria-hidden="true"></i> 051 237317
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
+       DOVE SIAMO
+  ════════════════════════════════════════ -->
+  <section id="dove" class="section-dove" aria-labelledby="dove-title">
+    <div class="container">
+
+      <header class="section-hd">
+        <span class="section-eyebrow">
+          <i class="fas fa-location-dot" aria-hidden="true"></i> Trovaci
+        </span>
+        <h2 id="dove-title">Dove Siamo</h2>
+        <div class="section-rule" aria-hidden="true"></div>
+      </header>
+
+      <div class="dove-layout">
+        <div class="dove-info">
+          <div class="info-item">
+            <div class="info-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <strong>Indirizzo</strong>
+              <p>Via Santa Felice, 6/B<br>40122 Bologna (BO)</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon" aria-hidden="true"><i class="fas fa-phone"></i></div>
+            <div>
+              <strong>Telefono</strong>
+              <p><a href="tel:+390512237317" aria-label="Chiama il 051 237317">051 237317</a></p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon" aria-hidden="true"><i class="fas fa-clock"></i></div>
+            <div>
+              <strong>Orari</strong>
+              <p>Mar – Sab: 08:00 – 20:00<br>Lun e Dom: Chiuso</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon" aria-hidden="true"><i class="fab fa-facebook"></i></div>
+            <div>
+              <strong>Facebook</strong>
+              <p>
+                <a href="https://www.facebook.com/JollySystem" target="_blank" rel="noopener noreferrer">
+                  Jolly System
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <a href="https://maps.app.goo.gl/JgZY8gvMexCBRZJc9" target="_blank" rel="noopener noreferrer"
+             class="btn-outline" aria-label="Apri indicazioni stradali su Google Maps">
+            <i class="fas fa-directions" aria-hidden="true"></i> Indicazioni Stradali
+          </a>
+        </div>
+
+        <div class="dove-map">
+          <iframe
+            src="https://maps.google.com/maps?q=Via+Santa+Felice+6B,+40122+Bologna+BO+Italia&output=embed&hl=it&z=16"
+            width="100%" height="100%"
+            style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mappa Jolly System – Via Santa Felice 6/B, Bologna"
+            aria-label="Mappa di Google che mostra la posizione di Jolly System">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand" aria-label="Jolly System">
+        <i class="fas fa-scissors" aria-hidden="true"></i>
+        <span>Jolly System</span>
+      </div>
+
+      <p class="footer-info">
+        Via Santa Felice, 6/B &middot; 40122 Bologna &middot;
+        <a href="tel:+390512237317" aria-label="Chiama il 051 237317">051 237317</a>
+      </p>
+
+      <div class="footer-social" aria-label="Social e mappe">
+        <a href="https://www.facebook.com/JollySystem" target="_blank" rel="noopener noreferrer" aria-label="Pagina Facebook Jolly System">
+          <i class="fab fa-facebook-f" aria-hidden="true"></i>
+        </a>
+        <a href="https://maps.app.goo.gl/JgZY8gvMexCBRZJc9" target="_blank" rel="noopener noreferrer" aria-label="Jolly System su Google Maps">
+          <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <p class="footer-copy">
+        &copy; <span id="year"></span> Jolly System di Rossi Fabrizio e Stefano S.n.c.
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- ════════════════════════════════════════
+       FLOATING CALL BUTTON
+  ════════════════════════════════════════ -->
+  <a href="tel:+390512237317" class="float-call" aria-label="Chiama Jolly System al 051 237317">
+    <i class="fas fa-phone" aria-hidden="true"></i>
+    <span class="float-call__label">Chiama ora</span>
+  </a>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
