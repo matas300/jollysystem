@@ -112,6 +112,23 @@ window.addEventListener('resize', () => {
 });
 
 
+/* ─── Cookie banner ─────────────────────────────── */
+(function () {
+  const banner = document.getElementById('cookieBanner');
+  const btn    = document.getElementById('cookieAccept');
+  if (!banner || !btn) return;
+
+  if (localStorage.getItem('cookieOk')) {
+    banner.classList.add('is-hidden');
+  }
+
+  btn.addEventListener('click', function () {
+    localStorage.setItem('cookieOk', '1');
+    banner.classList.add('is-hidden');
+  });
+})();
+
+
 /* ─── Smooth scroll ──────────────────────────────── */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
