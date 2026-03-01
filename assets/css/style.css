@@ -705,7 +705,7 @@ button { cursor: pointer; font-family: inherit; }
 .price-name {
   font-size: .98rem;
   color: var(--dark-2);
-  white-space: nowrap;
+  min-width: 0;
 }
 
 .price-dots {
@@ -1215,6 +1215,15 @@ button { cursor: pointer; font-family: inherit; }
     flex-direction: column;
     gap: .75rem;
     text-align: center;
-    padding: 1rem 1.25rem;
+    padding: .85rem 1rem;
+    bottom: 0;
+  }
+  .cookie-banner__text {
+    font-size: .78rem;
+    line-height: 1.4;
+  }
+  .cookie-banner__btn {
+    width: 100%;
+    padding: .65rem 1rem;
   }
 }
