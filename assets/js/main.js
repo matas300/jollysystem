@@ -42,6 +42,7 @@ updateActiveLink();
   const statusEl = document.getElementById('openStatus');
   if (!statusEl) return;
 
+  const lang = document.documentElement.lang || 'it';
   const now  = new Date();
   const day  = now.getDay();           // 0 = Domenica, 6 = Sabato
   const mins = now.getHours() * 60 + now.getMinutes();
@@ -51,15 +52,24 @@ updateActiveLink();
   // Aperti: martedì (2) – sabato (6), 08:00–20:00
   const isOpen = day >= 2 && day <= 6 && mins >= open && mins < close;
 
-  statusEl.textContent = isOpen ? 'Siamo aperti' : 'Siamo chiusi';
+  const labels = {
+    it: { open: 'Siamo aperti', closed: 'Siamo chiusi' },
+    en: { open: "We're open",   closed: "We're closed" }
+  };
+  const l = labels[lang] || labels.it;
+
+  statusEl.textContent = isOpen ? l.open : l.closed;
   statusEl.className   = 'topbar-status ' + (isOpen ? 'is-open' : 'is-closed');
 })();
 
 
 /* ─── Highlight today's row in orari ────────────── */
 (function () {
-  const dayNames = ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'];
-  const today    = dayNames[new Date().getDay()];
+  const lang = document.documentElement.lang || 'it';
+  const dayNames = lang === 'en'
+    ? ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+    : ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'];
+  const today = dayNames[new Date().getDay()];
 
   document.querySelectorAll('.hours-row[data-day]').forEach(row => {
     if (row.dataset.day === today) {
